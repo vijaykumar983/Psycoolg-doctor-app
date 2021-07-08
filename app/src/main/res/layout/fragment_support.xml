@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/layout_header" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appBar">
+
+            <RelativeLayout
+                android:id="@+id/rlMyRequest"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@color/colorWhite"
+                android:paddingHorizontal="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/my_request"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtSizeLarge" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAddTicket"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/btnSmallXSize"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_rounded_dark_blue"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:foreground="@drawable/ripple_rec"
+                    android:text="Add Ticket"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txtSizeSmall" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/linearTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlMyRequest"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:foreground="@drawable/ripple_rec">
+
+                <LinearLayout
+                    android:id="@+id/linearDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="@string/date"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txtSizeSmall" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_weight="0"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/ic_calendar" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtReqId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toStartOf="@id/txtStatus"
+                    android:layout_toEndOf="@id/linearDate"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:gravity="center"
+                    android:text="@string/request_id"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtSizeSmall" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="@string/status"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtSizeSmall" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSupport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearTitle"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_support" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/layout_header" />
+
+
+        <LinearLayout
+            android:id="@+id/linearCurrentRank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appBar"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@drawable/bg_rounded_white"
+            android:orientation="horizontal"
+            android:elevation="@dimen/_2sdp"
+            android:padding="@dimen/_8sdp">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_5sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imvUserProfile"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtuserName"
+                    style="@style/HW_WW"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="Dinesh Ji"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtSizeLarge" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Current Rank :"
+                        android:textColor="@color/color_B7B7B7"
+                        android:textSize="@dimen/txtSizeSmall" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="15"
+                        android:textColor="@color/color_FF9100"
+                        android:textSize="@dimen/txtSizeSmall" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearCurrentRank"
+            android:background="@drawable/bg_rounded_white"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:elevation="@dimen/_2sdp"
+            >
+
+            <LinearLayout
+                android:id="@+id/rlTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:foreground="@drawable/ripple_rec"
+                android:background="@drawable/bg_title_darkblue"
+                android:padding="@dimen/_10sdp"
+                android:weightSum="2"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:text="@string/dr_name"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txtSizeSmall" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="right"
+                    android:text="@string/rank"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txtSizeSmall" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRanking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:layout_below="@id/rlTitle"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_ranking" />
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+</layout>

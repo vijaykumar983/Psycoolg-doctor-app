@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/layout_header" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appBar"
+            android:background="@drawable/background"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:padding="@dimen/_15sdp">
+
+                <LinearLayout
+                    android:id="@+id/linearSelectDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rounded_location_3sdp"
+                    android:elevation="@dimen/_2sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:weightSum="1">
+
+                    <!-- <Spinner
+                         android:id="@+id/spinnerTopic"
+                         style="@style/SpinnerTheme"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:background="@color/color_D6E7FF"
+                         android:drawSelectorOnTop="true"
+                         android:entries="@array/select_choose_topic"
+                         android:foreground="@drawable/ripple_rec"
+                         android:popupBackground="@color/white" />-->
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_light"
+                        android:text="Today"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txtSizeNormal" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_13sdp"
+                        android:layout_height="@dimen/_13sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/ic_calendar" />
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearSelectDate"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/bg_rounded_white"
+                    android:elevation="@dimen/_2sdp">
+
+                    <RelativeLayout
+                        android:id="@+id/rlWallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_title_darkblue"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_15sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivWallet"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@drawable/ic_wallet" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ivWallet"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvWalletAmount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="Rs. 1000"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/txtSizeXXXLarge" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvCurrentWallet"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_light"
+                                    android:text="@string/wallet_amount"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/txtSizeSmall" />
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/view1"
+                                android:layout_width="0.5dp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginHorizontal="@dimen/_30sdp"
+                                android:layout_weight="0"
+                                android:background="@color/colorWhite" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvBonusAmount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="Rs. 500"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/txtSizeXXXLarge" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txtBonusEarned"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_light"
+                                    android:text="@string/bonus_earned"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/txtSizeSmall" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnWithdraw"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btnNormalSize"
+                        android:layout_below="@id/rlWallet"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:background="@drawable/bg_rounded_orange_8sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:foreground="@drawable/ripple_rec"
+                        android:text="@string/withdraw"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/txtSizeNormal" />
+
+                    <LinearLayout
+                        android:id="@+id/linearWalletBonus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/btnWithdraw"
+                        android:background="@color/view_color"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/_15sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:weightSum="2">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvWalletHistory"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/btnSmallXSize"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_rounded_dark_blue_6sdp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:foreground="@drawable/ripple_rec"
+                            android:gravity="center"
+                            android:onClick="onClick"
+                            android:text="@string/wallet_history"
+                            android:textColor="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvBonusHistory"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/btnSmallXSize"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_rounded_view_6sdp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:foreground="@drawable/ripple_rec"
+                            android:gravity="center"
+                            android:onClick="onClick"
+                            android:text="@string/bonus_history"
+                            android:textColor="@color/colorBlack" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvWalletHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/linearWalletBonus"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/row_wallet_history" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</layout>

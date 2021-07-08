@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/layout_header" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@drawable/bg_rounded_white_7sdp"
+            android:elevation="@dimen/_2sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_2sdp"
+            android:weightSum="2">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNewBookings"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btnSmallSize"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded_dark_blue_7sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:foreground="@drawable/ripple_rec"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="New Bookings"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOldBookings"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btnSmallSize"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded_white_7sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:foreground="@drawable/ripple_rec"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="Old Bookings"
+                android:textColor="@color/colorBlack" />
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearNewBookings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNewBooking"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_new_booking" />
+
+        <include
+            android:id="@+id/layoutError"
+            layout="@layout/layout_error_show" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearOldBookings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOldBooking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_old_booking" />
+
+            <include
+                android:id="@+id/layoutError1"
+                layout="@layout/layout_error_show1" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

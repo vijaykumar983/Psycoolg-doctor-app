@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/statusBarAll"
+        android:fillViewport="true"
+        tools:context=".ui.components.activities.splash.SplashActivity">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvLogo"
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:src="@drawable/logo_blue" />
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@id/imvLogo"
+            android:background="@color/view_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/viewLine">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtTermCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/terms_and_condtions"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txtSizeXLarge" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txtTermCondition"
+                android:layout_marginBottom="@dimen/_55sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                   >
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/_10sdp"
+                        android:text="@string/txt_agreement"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txtSizeX1Normal" />
+                </RelativeLayout>
+            </ScrollView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAcceptTermCond"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btnNormalSize"
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_rounded_dark_blue_7sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:foreground="@drawable/ripple_rec"
+                    android:onClick="onClick"
+                    android:text="@string/accept_terms_amp_conditions"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txtSizeNormal" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

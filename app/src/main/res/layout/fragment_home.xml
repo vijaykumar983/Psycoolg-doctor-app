@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <!-- <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:paddingHorizontal="@dimen/_5sdp">
+
+             <androidx.viewpager.widget.ViewPager
+                 android:id="@+id/viewPager"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/_150sdp"
+                 android:nestedScrollingEnabled="false" />
+
+             <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                 android:id="@+id/dots_indicator"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/viewPager"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="@dimen/_5sdp"
+                 app:dotsColor="@color/color_B7B7B7"
+                 app:dotsCornerRadius="0dp"
+                 app:dotsSize="@dimen/txtSizeXXSmall"
+                 app:dotsSpacing="@dimen/_5sdp"
+                 app:dotsWidthFactor="2.5"
+                 app:progressMode="false"
+                 app:selectedDotColor="@color/color_FF9100" />
+
+         </RelativeLayout>-->
+
+        <com.github.angads25.toggle.widget.LabeledSwitch
+            android:id="@+id/labelSwitch"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/SwitchCompatStyle"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:elevation="@dimen/_2sdp"
+            android:textSize="@dimen/txtSizeNormal"
+            app:colorBorder="@color/colorWhite"
+            app:colorOn="@color/color_00CC00"
+            app:on="false"
+            app:textOff="OFF"
+            app:textOn="ONLINE" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHomeItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="true"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/row_home_items" />
+
+                <LinearLayout
+                    android:id="@+id/linearEarnThisWeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_70sdp"
+                    android:background="@drawable/bg_btn_earn"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtEarnWeek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="@string/earned_this_week"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/txtSizeLarge" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvEarnWeekAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Rs. 25"
+                        android:textColor="@color/color_FFA000"
+                        android:textSize="@dimen/txtSizeXLarge" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+</layout>

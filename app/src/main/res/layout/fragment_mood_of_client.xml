@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/layout_header" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appBar"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@drawable/bg_rounded_white"
+            android:elevation="@dimen/_2sdp"
+            android:padding="@dimen/_2sdp">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:cardCornerRadius="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imvUserProfile"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDrName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Vijay Kumawat"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txtSizeLarge" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtMoodOfClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDrName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/mood_of_client"
+                android:textColor="@color/color_5D5D5D"
+                android:textSize="@dimen/txtSizeNormal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtMoodOfClient"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_rounded_bottom_view"
+                android:gravity="center"
+                android:padding="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivClientMood"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_smile" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtClientCollected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivClientMood"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:text="Client Mood Collected within last 30 days"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/txtSizeNormal" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

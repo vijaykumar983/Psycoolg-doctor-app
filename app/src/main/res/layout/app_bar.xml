@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlHomeMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relativeHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_220sdp"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_220sdp"
+                app:srcCompat="@drawable/ic_home_bg"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                app:srcCompat="@drawable/ic_banner"
+             android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_minus3sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                />
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarMain"
+                style="@style/HW_WM"
+                android:layout_height="?android:actionBarSize"
+                android:background="@null"
+                app:elevation="0dp">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:actionBarSize"
+                    android:elevation="0dp"
+                    android:gravity="center"
+                    app:contentInsetEnd="0dp"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetRight="0dp"
+                    app:contentInsetStart="0dp">
+
+
+                    <RelativeLayout style="@style/HW_MM">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTitle"
+                            style="@style/HW_WM"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@+id/imvNotification"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txtSizeTitle"
+                            android:visibility="visible" />
+
+
+                        <ImageView
+                            android:id="@+id/imvNotification"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:foreground="@drawable/ripple_round"
+                            android:onClick="onClick"
+                            android:src="@drawable/ic_notification"
+                            android:visibility="visible"
+                            app:tint="@color/white" />
+                    </RelativeLayout>
+
+                </com.google.android.material.appbar.MaterialToolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    </RelativeLayout>
+</layout>

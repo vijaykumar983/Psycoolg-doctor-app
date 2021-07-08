@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/layout_header" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appBar"
+            android:background="@drawable/background"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:padding="@dimen/_15sdp">
+
+                <RelativeLayout
+                    android:id="@+id/rlUploadBlog"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_170sdp"
+                    android:elevation="@dimen/_2sdp"
+                    android:clipToPadding="false"
+                    android:background="@drawable/bg_upload_blog_image">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            app:srcCompat="@drawable/ic_upload_img" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="@string/upload_quotes_image"
+                            android:textColor="@color/color_B7B7B7"
+                            android:textSize="@dimen/txtSizeNormal" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtBlog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlUploadBlog"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/bg_rounded_white"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="top|left"
+                    android:hint="@string/quote_text_here"
+                    android:inputType="textMultiLine"
+                    android:elevation="@dimen/_2sdp"
+                    android:lines="20"
+                    android:maxLines="40"
+                    android:minHeight="@dimen/_170sdp"
+                    android:minLines="10"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/color_B7B7B7"
+                    android:textSize="@dimen/txtSizeNormal" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btnNormalSize"
+                    android:layout_below="@id/edtBlog"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/bg_rounded_white_5"
+                    android:fontFamily="@font/montserrat_light"
+                    android:hint="@string/your_name"
+                    android:elevation="@dimen/_2sdp"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:textColorHint="@color/color_B7B7B7"
+                    android:textSize="@dimen/txtSizeNormal" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btnNormalSize"
+                    android:layout_below="@id/etName"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/bg_rounded_dark_blue_7sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:foreground="@drawable/ripple_rec"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:elevation="@dimen/_2sdp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txtSizeNormal" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</layout>

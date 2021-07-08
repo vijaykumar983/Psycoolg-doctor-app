@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <RelativeLayout
+            android:id="@+id/rowSupportItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/ripple_rec"
+            android:gravity="center"
+            android:background="@drawable/bg_rounded_white_5"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            >
+
+            <LinearLayout
+                android:id="@+id/linearDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/_5sdp"
+               android:layout_alignParentStart="true"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    app:srcCompat="@drawable/ic_calendar"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_weight="0"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="left"
+                    android:text="07 Sep \n2020"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtSizeXSmall" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReqId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="54983423"
+                android:layout_toEndOf="@id/linearDate"
+                android:layout_toStartOf="@id/tvStatus"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txtSizeSmall" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_alignParentEnd="true"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:text="Open"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:textColor="@color/color_00CC00"
+                android:textSize="@dimen/txtSizeSmall" />
+
+        </RelativeLayout>
+</layout>

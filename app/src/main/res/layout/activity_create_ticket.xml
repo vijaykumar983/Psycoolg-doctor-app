@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/layout_header" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appBar"
+            android:background="@drawable/background"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:padding="@dimen/_15sdp">
+
+                <LinearLayout
+                    android:id="@+id/linearChooseTopic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_rounded_location"
+                    android:elevation="@dimen/_2sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:weightSum="1">
+
+                    <Spinner
+                        android:id="@+id/spinnerTopic"
+                        style="@style/SpinnerTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/color_D6E7FF"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/select_choose_topic"
+                        android:foreground="@drawable/ripple_rec"
+                        android:popupBackground="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_weight="0"
+                        app:srcCompat="@drawable/ic_down_arrow" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearChooseTopic"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/bg_rounded_white"
+                    android:elevation="@dimen/_2sdp"
+                    android:fontFamily="@font/montserrat_light"
+                    android:gravity="top|left"
+                    android:hint="@string/type_your_message"
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    android:maxLines="10"
+                    android:minHeight="@dimen/_80sdp"
+                    android:minLines="5"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/color_B7B7B7"
+                    android:textSize="@dimen/txtSizeNormal" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCreateTicket"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btnNormalSize"
+                    android:layout_below="@id/edtMsg"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/bg_rounded_dark_blue_7sdp"
+                    android:elevation="@dimen/_2sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:foreground="@drawable/ripple_rec"
+                    android:text="@string/create_ticket"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txtSizeNormal" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtFaq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btnCreateTicket"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="@string/faq"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtSizeXLarge" />
+
+                <LinearLayout
+                    android:id="@+id/linearFaq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtFaq"
+                    android:background="@drawable/bg_rounded_white_5"
+                    android:elevation="@dimen/_2sdp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvFAQ"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/row_faq" />
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/layoutError"
+                    layout="@layout/layout_error_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/txtFaq" />
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</layout>

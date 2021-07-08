@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rowRankingItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/ripple_rec">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/color_D1D1D1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view1"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/imvUserProfile"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentStart="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDrName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toLeftOf="@id/rlStar"
+                android:layout_toRightOf="@id/imvUserProfile"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Vijay Kumawat"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txtSizeNormal" />
+
+            <RelativeLayout
+                android:id="@+id/rlStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivStar"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:tint="@color/color_FF9100"
+                    app:srcCompat="@drawable/ic_star" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRankCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:text="10"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txtSizeSmall" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

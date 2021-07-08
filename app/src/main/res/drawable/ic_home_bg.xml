@@ -1,0 +1,83 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="345dp"
+    android:height="337.049dp"
+    android:viewportWidth="345"
+    android:viewportHeight="337.049">
+  <group>
+    <clip-path
+        android:pathData="M0,0h345v337.049h-345z"/>
+    <path
+        android:pathData="M-36.051,286.471c9.652,43.343 26.147,42.938 36.639,32.445L344.902,318.916c71.521,0 115.013,-109.988 103.939,-170.6 -8.657,-47.4 -41.976,-117.5 -71.857,-155.3C345.82,-46.407 304.668,-41.917 240.342,-29.682c-46.642,8.873 -92.982,-22.7 -140.35,-19.447s-95.017,20.236 -128.6,53.8c-9.764,9.762 -18.411,21.125 -22.36,34.356 -3.19,10.684 -3.164,22.033 -2.909,33.181C-52.523,130.897 -40.03,268.608 -36.051,286.471Z">
+      <aapt:attr name="android:fillColor">
+        <gradient 
+            android:startY="-163.21884"
+            android:startX="436.7817"
+            android:endY="334.40036"
+            android:endX="57.909904"
+            android:type="linear">
+          <item android:offset="0" android:color="#FF2276E0"/>
+          <item android:offset="1" android:color="#FF7BD0FF"/>
+        </gradient>
+      </aapt:attr>
+    </path>
+    <path
+        android:pathData="M-123.824,135.651c23.148,-0.586 44.348,12.248 63.152,25.76s37.606,28.562 60.212,33.573 50.4,-3.959 57.915,-25.86c3.906,-11.376 2.159,-25.091 9.925,-34.279 6.665,-7.88 18.183,-9.555 28.476,-8.79s20.59,3.408 30.81,1.972c18.283,-2.564 32.33,-17.565 41.864,-33.372 15.842,-26.269 23.573,-57.982 18.261,-88.194 -5.856,-33.307 -27.158,-62.662 -54.332,-82.8 -42.605,-31.569 -100.1,-41.482 -151.227,-27.418S-113.824,-52.352 -137.298,-4.803c-20.91,42.361 -31.2,106.49 -10.342,150.889C-139.416,142.196 -134.377,135.917 -123.824,135.651Z">
+      <aapt:attr name="android:fillColor">
+        <gradient 
+            android:startY="-83.814705"
+            android:startX="-164.17079"
+            android:endY="249.25647"
+            android:endX="273.59882"
+            android:type="linear">
+          <item android:offset="0" android:color="#FF5E94D7"/>
+          <item android:offset="1" android:color="#FF7BD0FF"/>
+        </gradient>
+      </aapt:attr>
+    </path>
+    <path
+        android:pathData="M212.355,252.304a12.031,12.031 0,1 1,-12.031 -12.031A12.031,12.031 0,0 1,212.355 252.304Z">
+    </path>
+    <path
+        android:pathData="M336.922,75.523a2.059,2.059 0,1 1,-2.059 -2.059A2.06,2.06 0,0 1,336.922 75.523Z">
+      <aapt:attr name="android:fillColor">
+        <gradient 
+            android:startY="75.54908"
+            android:endY="75.54908"
+            android:startX="332.75186"
+            android:endX="336.922"
+            android:type="linear">
+          <item android:offset="0" android:color="#FFC3E6D7"/>
+          <item android:offset="1" android:color="#FF7BD0FF"/>
+        </gradient>
+      </aapt:attr>
+    </path>
+    <path
+        android:pathData="M334.868,218.85a2.06,2.06 0,1 1,-2.059 -2.059A2.06,2.06 0,0 1,334.868 218.85Z">
+    </path>
+    <path
+        android:pathData="M13.426,129.575a2.059,2.059 0,1 1,-2.059 -2.059A2.06,2.06 0,0 1,13.426 129.575Z">
+    </path>
+    <path
+        android:pathData="M242.746,20.031a2.059,2.059 0,1 1,-2.059 -2.059A2.06,2.06 0,0 1,242.746 20.031Z">
+    </path>
+    <path
+        android:pathData="M233.359,143.846m-2.059,0a2.059,2.059 0,1 1,4.118 0a2.059,2.059 0,1 1,-4.118 0">
+    </path>
+    <path
+        android:pathData="M204.475,58.359a2.059,2.059 0,1 1,-2.059 -2.059A2.058,2.058 0,0 1,204.475 58.359Z">
+    </path>
+    <path
+        android:pathData="M91.885,17.972a2.059,2.059 0,1 1,-2.059 -2.059A2.06,2.06 0,0 1,91.885 17.972Z">
+    </path>
+    <path
+        android:pathData="M131.203,127.516a2.06,2.06 0,1 1,-2.059 -2.059A2.06,2.06 0,0 1,131.203 127.516Z">
+    </path>
+    <path
+        android:pathData="M226.097,244.227a2.06,2.06 0,1 1,-2.061 -2.059A2.06,2.06 0,0 1,226.097 244.227Z">
+    </path>
+    <path
+        android:pathData="M24.927,287.412a2.059,2.059 0,1 1,-2.059 -2.059A2.058,2.058 0,0 1,24.927 287.412Z">
+    </path>
+  </group>
+</vector>

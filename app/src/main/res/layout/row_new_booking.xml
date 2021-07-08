@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rowNewBookingItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:background="@drawable/bg_rounded_white"
+        android:foreground="@drawable/ripple_rec"
+        android:elevation="@dimen/_2sdp">
+
+        <LinearLayout
+            android:id="@+id/linearHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8sdp">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_5sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivUser"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/white"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/user" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUserName"
+                    style="@style/HW_WW"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="Dinesh Ji"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtSizeLarge" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/linearCall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:foreground="@drawable/ripple_rec"
+                        android:onClick="onClick"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            app:srcCompat="@drawable/ic_call" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Audio Call"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/txtSizeSmall" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:foreground="@drawable/ripple_rec"
+                        android:onClick="onClick"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            app:srcCompat="@drawable/ic_video" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="@string/video_call"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/txtSizeSmall" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

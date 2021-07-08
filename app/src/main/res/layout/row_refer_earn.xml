@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/rowReferItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/color_D1D1D1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view1"
+            android:foreground="@drawable/ripple_rec"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_5sdp"
+           >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_alignParentStart="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="left"
+                android:text="07 Sep \n2020"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txtSizeXSmall" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:layout_toStartOf="@id/tvAmount"
+                android:layout_toEndOf="@id/tvDate"
+                android:text="Vijay Kumawat"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txtSizeSmall" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_alignParentEnd="true"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:text="+100"
+                android:textColor="@color/color_00CC00"
+                android:textSize="@dimen/txtSizeSmall" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

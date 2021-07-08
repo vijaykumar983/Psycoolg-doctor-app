@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rowWalletHistoryItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_D1D1D1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_7sdp"
+            android:weightSum="1">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtuserName"
+                    style="@style/HW_WW"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Vijay (client)"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtSizeLarge" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvEditProfile"
+                    style="@style/HW_WW"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Amount Received"
+                    android:textColor="@color/color_00CC00"
+                    android:textSize="@dimen/txtSizeSmall" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_calendar" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="4 May, 2020"
+                        android:textColor="@color/color_5D5D5D"
+                        android:textSize="@dimen/txtSizeSmall" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_weight="0"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="+500"
+                android:textColor="@color/color_00CC00"
+                android:textSize="@dimen/txtSizeXLarge" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

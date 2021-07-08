@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+   android:id="@+id/rowHomeItem"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_100sdp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_rounded_white"
+    android:padding="@dimen/_10sdp"
+    android:layout_marginVertical="@dimen/_8sdp"
+    android:layout_marginHorizontal="@dimen/_20sdp"
+    android:gravity="center"
+    android:onClick="onClick"
+    android:foreground="@drawable/ripple_rec"
+    android:elevation="@dimen/_2sdp"
+    >
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivItem"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        app:srcCompat="@drawable/ic_patient"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Patient"
+        android:textSize="@dimen/txtSizeX1Normal"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_marginTop="@dimen/_3sdp"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTotalCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="34"
+        android:textSize="@dimen/txtSizeX0Large"
+        android:textColor="@color/color_004EB4"
+        android:fontFamily="@font/montserrat_semibold"
+        android:layout_marginTop="@dimen/_3sdp"
+        />
+
+</LinearLayout>
+</layout>

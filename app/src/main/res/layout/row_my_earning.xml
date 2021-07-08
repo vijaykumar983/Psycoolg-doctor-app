@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/rowMyEarningItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="@drawable/ripple_rec">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/color_D1D1D1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view1"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/imvUserProfile"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentStart="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDrName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toLeftOf="@id/tvTotalCount"
+                android:layout_toRightOf="@id/imvUserProfile"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Vijay Kumawat"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txtSizeNormal" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:text="+150"
+                android:textColor="@color/color_00CC00"
+                android:textSize="@dimen/txtSizeNormal" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

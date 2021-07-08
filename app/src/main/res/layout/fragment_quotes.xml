@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/layout_header" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSubmitQuote"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btnNormalSize"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@drawable/bg_rounded_dark_blue_7sdp"
+            android:fontFamily="@font/montserrat_medium"
+            android:foreground="@drawable/ripple_rec"
+            android:text="@string/submit_quote"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txtSizeNormal" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvQuotes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_quotes" />
+
+
+    </LinearLayout>
+</layout>
